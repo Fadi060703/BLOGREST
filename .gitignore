@@ -1,0 +1,15 @@
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+env/
+.env
+
+# Django-related
+db.sqlite3
+staticfiles/
+
+# VSCode-related
+.vscode/
