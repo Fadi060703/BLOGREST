@@ -138,9 +138,9 @@ class ListCreateCommentView( APIView ) :
     
     def post( self , request : Request , pk : int ) :
         post = get_object_or_404( Post , pk = pk ) 
-        serializer = self.serializer_class(post , data = request.data ) 
+        serializer = self.serializer_class( data = request.data ) 
         if serializer.is_valid() :
-            serializer.save(  )
+            serializer.save( post = post  )
             response = {
                 'message' : 'comment added' ,
                 'data' : serializer.data
